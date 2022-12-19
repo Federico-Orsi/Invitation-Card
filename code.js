@@ -18,7 +18,7 @@ diasRestantes,
 
 }
 
-console.log(calcularTiempoRestante('Nov 05 2022 18:00:00 GMT-0300'));
+
 
 // Mostrar CountDown en Pantalla
 let countdownDias = document.getElementById("countdownDias");
@@ -37,13 +37,17 @@ countdownSegundos.innerHTML = `${tiempo.segundosRestantes}`;
 
 if(tiempo.tiempoRestante <= 1){
     clearInterval(timer);
+    countdownDias.innerHTML = "00" ;
+    countdownHoras.innerHTML = "00" ;
+    countdownMinutos.innerHTML = "00" ;
+    countdownSegundos.innerHTML = "00" ;
 }
 },1000)    
 
 }
 
 
-showCountDown('Nov 05 2022 18:00:00 GMT-0300');
+showCountDown('Dec 31 2022 23:59:59 GMT-0300');
 
 
 // Mostrar CBU en Seccion Regalos:
